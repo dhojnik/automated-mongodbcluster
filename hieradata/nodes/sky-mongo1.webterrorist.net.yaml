@@ -4,7 +4,7 @@ classes:
   - '::mongodb::server'
   - '::mongodb::client'
 mongodb::server::replset_config:
-  'mongodb-sky':
+  'mongodb-test':
     ensure: present
     members:
       - sky-mongo1.webterrorist.net:27017
@@ -16,5 +16,5 @@ mongodb::server::bind_ip: ['0.0.0.0']
 mongodb::server::noauth: true
 mongodb::server::port: 27017
 mongodb::server::verbose: true
-mongodb::server::replset: 'mongodb-sky'
+mongodb::server::replset: 'mongodb-test'
 mongodb::globals::manage_package_repo: 'true'
