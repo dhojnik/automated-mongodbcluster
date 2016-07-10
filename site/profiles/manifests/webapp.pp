@@ -97,7 +97,7 @@ python::pip { 'flask-mongoengine' :
  }
 
 python::pip { 'itsdangerous' :
-  pkgname       => 'istdangerous',
+  pkgname       => 'itsdangerous',
   ensure        => '0.24',
   virtualenv    => '/var/www/virtualenv',
   owner         => 'apache',
