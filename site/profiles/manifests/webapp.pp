@@ -125,7 +125,7 @@ python::pip { 'MarkupSafe' :
 
 python::pip { 'mongoengine' :
   pkgname       => 'mongoengine',
-  ensure        => '0.10.6',,
+  ensure        => '0.10.6',
   virtualenv    => '/var/www/virtualenv',
   owner         => 'apache',
   group         => 'apache',
