@@ -8,6 +8,10 @@ class profiles::webapp {
   path   => '/var/www'
   }
 
+  package { ['python-virtualenv',]:
+    ensure  => 'latest',
+  }
+
 vcsrepo { '/var/www/webapp':
   ensure   => present,
   provider => git,
