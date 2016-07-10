@@ -25,13 +25,12 @@ vcsrepo { '/var/www/webapp':
  python::virtualenv { '/var/www/webapp' :
   ensure       => present,
   version      => 'system',
-  requirements => '/tmp/requirements.txt',
+  requirements => '/var/www/webapp/requirements.txt',
   systempkgs   => true,
   distribute   => false,
   venv_dir     => '/var/www/virtualenv',
   owner        => 'apache',
   group        => 'apache',
-  cwd          => '/var/www/webapp',
   timeout      => 0,
  }
 
