@@ -8,13 +8,10 @@ class profiles::webapp {
   path   => '/var/www'
   }
 
-file { 'requirements.txt':
-  ensure => file,
-  source => 'puppet:///requirements.txt'
-  target => '/tmp/requirements.txt'
-  owner  => 'apache',
-  group  => 'apache',
-  mode   => '774'
+vcsrepo { '/var/www/webapp':
+  ensure   => present,
+  provider => git,
+  source   => 'https://github.com/dhojnik/tumbleblog.git',
 }
 
  file { 'www-webapp':
