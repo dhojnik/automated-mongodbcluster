@@ -34,4 +34,10 @@ vcsrepo { '/var/www/webapp':
   timeout      => 0,
  }
 
+python::requirements { '/var/www/webapp/requirements.txt' :
+  virtualenv => '/var/www/virtualenv',
+  owner      => 'apache',
+  group      => 'apache',
+}
+
 }
