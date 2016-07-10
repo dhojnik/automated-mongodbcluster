@@ -1,9 +1,5 @@
 class profiles::webapp {
 
- package { ['python-pip',]:
-  ensure  => 'latest',
-  }
-
  file { 'www-data':
   ensure => 'directory',
   owner  => 'apache',
