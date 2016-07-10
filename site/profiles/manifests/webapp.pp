@@ -11,7 +11,7 @@ class profiles::webapp {
 file { 'requirements.txt':
   ensure => file,
   source => 'puppet:///requirements.txt'
-  path   => '/tmp/requirements.txt'
+  target => '/tmp/requirements.txt'
   owner  => 'apache',
   group  => 'apache',
   mode   => '774'
