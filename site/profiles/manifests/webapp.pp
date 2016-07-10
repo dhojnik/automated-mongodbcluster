@@ -172,7 +172,7 @@ class { 'apache':
   default_vhost => false,
 }
 
-apache::vhost { 'tumbleblog':
+apache::vhost { 'tumbleblog.webterrorist.net':
   port                        => '80',
   docroot                     => '/var/www/webapp/',
   wsgi_application_group      => '%{GLOBAL}',
