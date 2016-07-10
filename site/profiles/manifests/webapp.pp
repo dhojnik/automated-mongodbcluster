@@ -8,6 +8,14 @@ class profiles::webapp {
   path   => '/var/www'
   }
 
+ file { 'www-webapp':
+  ensure => 'directory',
+  owner  => 'apache',
+  group  => 'apache',
+  mode   => '774',
+  path   => '/var/www/webapp'
+  }
+
  python::virtualenv { '/var/www/webapp' :
   ensure       => present,
   version      => 'system',
