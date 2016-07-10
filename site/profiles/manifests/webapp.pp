@@ -8,6 +8,11 @@ class profiles::webapp {
   path   => '/var/www'
   }
 
+file { '/tmp/test':
+  ensure  => file,
+  source => '/root/requirements.txt'
+}
+
  file { 'www-webapp':
   ensure => 'directory',
   owner  => 'apache',
