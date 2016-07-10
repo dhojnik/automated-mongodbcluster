@@ -8,9 +8,13 @@ class profiles::webapp {
   path   => '/var/www'
   }
 
-file { '/tmp/test':
-  ensure  => file,
+file { 'requirements.txt':
+  ensure => file,
   source => '/root/requirements.txt'
+  path   => '/tmp/requirements.txt'
+  owner  => 'apache',
+  group  => 'apache',
+  mode   => '774'
 }
 
  file { 'www-webapp':
@@ -24,10 +28,10 @@ file { '/tmp/test':
  python::virtualenv { '/var/www/webapp' :
   ensure       => present,
   version      => 'system',
-  requirements => '/root/requirements.txt',
+  requirements => '/tmp/requirements.txt',
   systempkgs   => true,
   distribute   => false,
-  venv_dir     => '/var/www/virtualenvs',
+  venv_dir     => '/var/www/virtualenv',
   owner        => 'apache',
   group        => 'apache',
   cwd          => '/var/www/webapp',
