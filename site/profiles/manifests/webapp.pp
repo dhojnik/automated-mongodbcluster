@@ -1,14 +1,16 @@
 class profiles::webapp {
 
-  package { ['python-django',]:
-    ensure  => 'latest',
-  }
+python::virtualenv { '/var/www/webapp' :
+  ensure       => present,
+  version      => 'system',
+  requirements => '/root/requirements.txt',
+  systempkgs   => true,
+  distribute   => false,
+  venv_dir     => '/var/www/virtualenvs',
+  owner        => 'apache',
+  group        => 'apache',
+  cwd          => '/var/www/webapp',
+  timeout      => 0,
+ }
 
-  package { ['python-pymongo',]:
-    ensure  => 'latest',
-  }
-
-  package { ['python-mongoengine',]:
-    ensure  => 'latest',
-  }
 }
