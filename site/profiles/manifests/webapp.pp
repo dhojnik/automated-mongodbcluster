@@ -40,7 +40,6 @@ python::pip { 'django-bootstrap3' :
   virtualenv    => '/var/www/virtualenv',
   owner         => 'apache',
   group         => 'apache',
-  install_args  => '-e',
   timeout       => 1800,
  }
 
