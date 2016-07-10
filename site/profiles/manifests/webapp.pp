@@ -34,10 +34,14 @@ vcsrepo { '/var/www/webapp':
   timeout      => 0,
  }
 
-python::requirements { '/var/www/webapp/requirements.txt' :
-  virtualenv => '/var/www/virtualenv',
-  owner      => 'apache',
-  group      => 'apache',
-}
+python::pip { 'django-bootstrap3' :
+  pkgname       => 'django-bootstrap3',
+  ensure        => '7.0.1',
+  virtualenv    => '/var/www/project1',
+  owner         => 'apache',
+  group         => 'apache',
+  install_args  => '-e',
+  timeout       => 1800,
+ }
 
 }
