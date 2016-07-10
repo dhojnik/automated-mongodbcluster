@@ -168,11 +168,13 @@ python::pip { 'WTForms' :
   timeout       => 1800,
  }
 
-Include apache
+class { 'apache':
+  default_vhost => false,
+}
 
 apache::vhost { 'tumbleblog':
   port                        => '80',
-  docroot                     => '/var/www/webapp/tumbleblog/',
+  docroot                     => '/var/www/webapp/',
   wsgi_application_group      => '%{GLOBAL}',
   wsgi_daemon_process         => 'wsgi',
   wsgi_daemon_process_options => {
@@ -180,13 +182,13 @@ apache::vhost { 'tumbleblog':
     threads      => '15',
     display-name => '%{GROUP}',
   },
-  wsgi_import_script          => '/var/www/webapp/tumbleblog/tumbleblog.wsgi',
+  wsgi_import_script          => '/var/www/webapp/tumbleblog.wsgi',
   wsgi_import_script_options  => {
     process-group     => 'wsgi',
     application-group => '%{GLOBAL}',
   },
   wsgi_process_group          => 'wsgi',
-  wsgi_script_aliases         => { '/' => '/var/www/webapp/tumbleblog/tumbleblog.wsgi' },
+  wsgi_script_aliases         => { '/' => '/var/www/webapp/tumbleblog.wsgi' },
 }
 
 }
