@@ -168,6 +168,8 @@ python::pip { 'WTForms' :
   timeout       => 1800,
  }
 
+Include apache
+
 apache::vhost { 'tumbleblog':
   port                        => '80',
   docroot                     => '/var/www/webapp/tumbleblog/',
