@@ -37,7 +37,7 @@ vcsrepo { '/var/www/webapp':
 python::pip { 'django-bootstrap3' :
   pkgname       => 'django-bootstrap3',
   ensure        => '7.0.1',
-  virtualenv    => '/var/www/project1',
+  virtualenv    => '/var/www/virtualenv',
   owner         => 'apache',
   group         => 'apache',
   install_args  => '-e',
