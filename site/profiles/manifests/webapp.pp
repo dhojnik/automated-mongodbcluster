@@ -1,7 +1,5 @@
 class profiles::webapp {
 
-include selinux
-
 class { 'selinux':
  mode => 'permissive'
 }
