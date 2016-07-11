@@ -1,7 +1,5 @@
 class profiles::python {
 
-
-
 class { 'python' :
   version    => 'system',
   pip        => 'present',
