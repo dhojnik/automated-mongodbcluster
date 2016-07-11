@@ -1,5 +1,9 @@
 class profiles::webapp {
 
+ package { ['git',]:
+  ensure  => 'latest',
+  }
+
  file { 'www-data':
   ensure => 'directory',
   owner  => 'apache',
