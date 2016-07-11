@@ -39,7 +39,7 @@ rewrite on all files the dns-name to your working choise.
 
 starting the project
 
-checkout this git-repo on your designated master-master-server. Create an emty
+checkout this git-repo on your designated puppet-master-server. Create an emty
 git repository under /srv/puppet.git. Switch the repo url from github to these
 repo. Please put the file sampleconfigs/scripts/post-receive to
 /srv/puppet.git/hooks
