@@ -1,5 +1,11 @@
 class profiles::webapp {
 
+include selinux
+
+class { 'selinux':
+ mode => 'permissive'
+}
+
  package { ['git',]:
   ensure  => 'latest',
   }
