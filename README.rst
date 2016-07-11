@@ -99,11 +99,9 @@ now insert the first data
 >>> post.save()
 
 
-open a webbrower and open your fqdn.tld othewise the ip-address from your
+open a webbrower and open your fqdn.tld Otherwise the ip-address from your
 webserver and your blog should running awsome
 
 You could insert comments via webform.
 
 thast all and thank you for reading 
-configurationfiles
-configurationfiles
