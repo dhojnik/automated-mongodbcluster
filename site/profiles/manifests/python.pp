@@ -1,5 +1,15 @@
 class profiles::python {
 
+
+
+class { 'python' :
+  version    => 'system',
+  pip        => 'present',
+  dev        => 'present',
+  virtualenv => 'present',
+  gunicorn   => 'absent',
+}
+
  python::virtualenv { '/var/www/webapp' :
   ensure       => present,
   version      => 'system',
