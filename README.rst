@@ -98,6 +98,8 @@ now insert the first data
 ... )
 >>> post.save()
 
+please note you may have to correct the fqdn or the ip fo the mongodb master
+under /var/www/webapp/tumbleblog/__init__.py
 
 open a webbrower and open your fqdn.tld Otherwise the ip-address from your
 webserver and your blog should running awsome
