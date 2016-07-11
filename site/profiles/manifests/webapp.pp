@@ -4,6 +4,10 @@ class profiles::webapp {
   ensure  => 'latest',
   }
 
+ package { ['lynx',]:
+  ensure  => 'latest',
+  }
+
  file { 'www-data':
   ensure => 'directory',
   owner  => 'apache',
