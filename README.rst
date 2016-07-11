@@ -16,7 +16,7 @@ puppet using hiera
 
 3.) a Webserver based on apache and mod_wsgi
 puppet will install on these node a sample webapp based on python they uses the
-mongodb cluster as database backend. It installs a python virtenv, all
+mongodb cluster as database backend. It installs a python virtenv, and inside the virtenv all
 dependencies exclusive inside the virtenv. Apache serves the webapp with
 mod_wsgi after all.
 
