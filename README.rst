@@ -106,4 +106,4 @@ webserver and your blog should running awsome
 
 You could insert comments via webform.
 
-thast all and thank you for reading 
+that is all and thank you for reading!
